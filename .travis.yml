@@ -8,9 +8,9 @@ install:
   - npm install -g ethereumjs-testrpc
   - npm install
 script:
-  - npm truffle test
+  - npm test
 before_script:
   - testrpc > /dev/null &
   - sleep 5
 after_script:
-  - npm run ./node_modules/.bin/solidity-coverage && cat coverage/lcov.info | coveralls
+  - npm run coverage && cat coverage/lcov.info | coveralls
