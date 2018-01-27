@@ -1,14 +1,10 @@
-var KetherHomepage = artifacts.require("./KetherHomepage.sol");
+var Mortal = artifacts.require("./Mortal.sol");
+var Lotthereum = artifacts.require("./Lotthereum.sol");
 
-module.exports = function(deployer, network, accounts) {
-  console.log("Deploying to: ", network, accounts);
-  // We deploy the contract with the ownder being the first address from accounts
-  const owner = accounts[0];
-  if (network == "live") {
-    const withdrawWallet = "0x00010dB6b405c4Cff3185926f5BDA140703A77c5";
-    deployer.deploy(KetherHomepage, owner, withdrawWallet);
-    return;
-  }
-
-  deployer.deploy(KetherHomepage, owner, owner);
+module.exports = function(deployer) {
+    hash = '0x93036b147316017199338e191dbff124b5358520517f23a4b38db9769850f4ca';
+    deployer.deploy(Mortal);
+    deployer.link(Mortal, Lotthereum);
+    // deployer.deploy(Lotthereum, 1, 20, 100000000000000000, 1000000000000000000, hash);
+    deployer.deploy(Lotthereum);
 };
