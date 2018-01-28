@@ -1,0 +1,26 @@
+{
+  "name": "blabla",
+  "version": "1.0.0",
+  "description": "Secure Smart Contract library for Solidity",
+  "scripts": {
+    "test": "truffle test",
+    "coverage": "./node_modules/.bin/solidity-coverage"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "security",
+    "zeppelin"
+  ],
+  "author": "Alexey Kustov <alexzibert@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "ethjs-abi": "^0.2.1"
+  }
+}
