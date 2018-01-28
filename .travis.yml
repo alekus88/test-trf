@@ -10,6 +10,8 @@ install:
 script:
   - npm test
 before_script:
+  - truffle version
+  - testrpc version
   - testrpc > /dev/null &
   - sleep 5
 after_script:
