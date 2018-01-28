@@ -10,9 +10,7 @@ install:
 script:
   - npm test
 before_script:
-  - truffle version
   - testrpc > /dev/null &
   - sleep 5
 after_script:
-#  - npm run coverage && cat coverage/lcov.info | coveralls
-  - npm run coverage
+  - npm run coverage && cat coverage/lcov.info | coveralls
